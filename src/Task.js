@@ -5,6 +5,5 @@ function Task(name) {
     }
     this.done = false;
     this.title = name;
-
 }
 
