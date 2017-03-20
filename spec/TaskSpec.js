@@ -16,12 +16,15 @@ describe("Task", ()=> {
     it('should not be done', () => {
       expect(task.done).toBe(false);
     });
-    it('should throw an error if it has no name', () => {
+    it('should have the correct title ', () => {
+      expect(task.title).toBe('title');
+    });
+    it('should throw an error if it has no title', () => {
       try {
         let t = new Task();
         fail();
       } catch(err) {
-        expect(err.message).toEqual('Task must have a name');
+        expect(err.message).toEqual('Task must have a title');
       }
     })
   });
